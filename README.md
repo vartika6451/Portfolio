@@ -40,7 +40,7 @@ In that file you'll find:
 
 ### Things outside that file you'll also want to replace
 
-- **`public/resume.pdf`** — the "Download Resume" button links to `/resume.pdf`. Add your actual resume PDF at `public/resume.pdf`.
+- **`public/resume.pdf`** — the "View Resume" button links to `/resume.pdf`. Add your actual resume PDF at `public/resume.pdf`.
 - **`public/og-image.png`** — social-share preview image (1200×630px), referenced in `src/app/layout.tsx` metadata.
 - **`public/favicon.ico`** — currently the default Next.js icon.
 - **Site URL** — `siteUrl` constant in `src/app/layout.tsx` and `src/app/sitemap.ts` is set to a placeholder (`https://aaravsharma.dev`). Update it to your real domain once deployed.

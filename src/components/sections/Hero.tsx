@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import dynamic from "next/dynamic";
-import { ArrowDown, ArrowUpRight, Download, MessageSquare } from "lucide-react";
+import { ArrowDown, ArrowUpRight, FileText, MessageSquare } from "lucide-react";
 import { profile, stats } from "@/data/profile";
 import { useTypewriter } from "@/hooks/useTypewriter";
 import Button from "@/components/ui/Button";
@@ -113,8 +113,14 @@ export default function Hero() {
             <Button href="#projects" variant="primary" icon={<ArrowUpRight size={16} />}>
               View Projects
             </Button>
-            <Button href={profile.resumeUrl} variant="secondary" icon={<Download size={16} />}>
-              Download Resume
+            <Button
+              href={profile.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="secondary"
+              icon={<FileText size={16} />}
+            >
+              View Resume
             </Button>
             <Button href="#contact" variant="ghost" icon={<MessageSquare size={16} />}>
               Contact Me

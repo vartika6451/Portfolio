@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, ChevronDown, CheckCircle2 } from "lucide-react";
+import { ArrowUpRight, ChevronDown, CheckCircle2, Github } from "lucide-react";
 import { Project } from "@/data/profile";
 import TiltCard from "@/components/ui/TiltCard";
 import { cn } from "@/lib/utils";
@@ -88,7 +88,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
                   data-cursor-interactive
                   className="flex h-9 w-9 items-center justify-center rounded-full glass transition-colors hover:border-accent-2 hover:text-accent-2"
                 >
-                  <ArrowUpRight size={16} />
+                  <Github size={16} />
                 </a>
               )}
             </div>
