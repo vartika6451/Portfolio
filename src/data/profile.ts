@@ -23,9 +23,9 @@ export const profile = {
 };
 
 export const stats = [
-  { label: "Projects Completed", value: 3, suffix: "+" },
+  { label: "Projects Completed", value: 8, suffix: "+" },
   { label: "DSA Problems Solved", value: 400, suffix: "+" },
-  { label: "Hackathons Participated", value: 5, suffix: "+" },
+  { label: "Hackathons Participated", value: 10, suffix: "+" },
   { label: "GitHub Contributions", value: 200, suffix: "+" },
 ];
 
@@ -33,9 +33,9 @@ export const aboutMe = [
   "I'm a Computer Science undergraduate at GGSIPU, Delhi, currently building my way through full-stack development, Generative AI, and Web3.",
   "On the frontend, I work primarily with React and Next.js, building responsive, animated, production-grade interfaces with TypeScript and Tailwind CSS. On the backend, I build REST APIs and services with Node.js and Express, using TypeScript throughout for type safety, and I'm comfortable working with both SQL (PostgreSQL) and NoSQL (MongoDB) databases.",
   "I'm currently exploring Web3 — building on both Solana and Ethereum — and spend a lot of my time experimenting with Generative AI, integrating LLM APIs (Gemini, Groq) into real products rather than just using them as chatbots.",
-  "Competitive programming is a core part of how I think about engineering: I've solved 400+ DSA problems on LeetCode and hold a Codeforces rating built from 40 problems solved across rated contests. I've participated in 5+ hackathons, including a 1st-place win, a Top 5 finish (out of 400+ teams) at Brewing Codes 4.0, and qualifying for Smart India Hackathon (SIH) at the university level among 170+ competing teams.",
+  "Competitive programming is a core part of how I think about engineering: I've solved 400+ DSA problems on LeetCode and hold a Codeforces rating built from 40 problems solved across rated contests. I've participated in 10+ hackathons, including a 1st-place win, a Top 5 finish (out of 400+ teams) at Brewing Codes 4.0, and qualifying for Smart India Hackathon (SIH) at the university level among 170+ competing teams.",
   "I also served as a Junior Council Member at the Anveshan Technical Community, where I helped organize 5+ technical events for 200+ students.",
-  "I haven't worked professionally yet — but I've shipped three full-stack products end-to-end (see Projects below), each solving a real, specific problem, and I'm actively looking for internships and software engineering roles where I can keep building things that matter."
+  "I haven't worked professionally yet — but I've shipped 8+ projects end-to-end (see Projects below), each solving a real, specific problem, and I'm actively looking for internships and software engineering roles where I can keep building things that matter."
 ];
 
 export const education = {
