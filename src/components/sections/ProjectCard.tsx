@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, Github, ChevronDown, CheckCircle2 } from "lucide-react";
+import { ArrowUpRight, ChevronDown, CheckCircle2 } from "lucide-react";
 import { Project } from "@/data/profile";
 import TiltCard from "@/components/ui/TiltCard";
 import { cn } from "@/lib/utils";
@@ -26,14 +26,27 @@ export default function ProjectCard({ project, index }: { project: Project; inde
             project.color
           )}
         >
-          <div className="absolute inset-0 bg-bg/40" />
-          <div className="absolute inset-0 opacity-20 mix-blend-overlay grid-bg" />
-          <span className="relative font-display text-5xl font-bold tracking-tight text-white/90 sm:text-6xl">
-            {project.name
-              .split(" ")
-              .map((w) => w[0])
-              .join("")}
-          </span>
+          {project.image ? (
+            <>
+              <img
+                src={project.image}
+                alt={project.name}
+                className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black/50 to-transparent pointer-events-none" />
+            </>
+          ) : (
+            <>
+              <div className="absolute inset-0 bg-bg/40" />
+              <div className="absolute inset-0 opacity-20 mix-blend-overlay grid-bg" />
+              <span className="relative font-display text-5xl font-bold tracking-tight text-white/90 sm:text-6xl">
+                {project.name
+                  .split(" ")
+                  .map((w) => w[0])
+                  .join("")}
+              </span>
+            </>
+          )}
 
           <div className="absolute right-4 top-4 rounded-full bg-bg/60 px-3 py-1 font-mono text-[11px] text-white backdrop-blur-sm">
             {project.year}
@@ -75,7 +88,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
                   data-cursor-interactive
                   className="flex h-9 w-9 items-center justify-center rounded-full glass transition-colors hover:border-accent-2 hover:text-accent-2"
                 >
-                  <Github size={16} />
+                  <ArrowUpRight size={16} />
                 </a>
               )}
             </div>

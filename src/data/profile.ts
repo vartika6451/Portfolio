@@ -99,7 +99,6 @@ export const skills: Skill[] = [
   { name: "Groq API (Llama 3.3)", level: 75, category: "AI/ML" },
   { name: "Multi-Agent AI Systems", level: 70, category: "AI/ML" },
   { name: "NLP / Sentiment Analysis", level: 65, category: "AI/ML" },
-  { name: "Prompt Engineering", level: 80, category: "AI/ML" },
 ];
 
 export const skillCategories: SkillCategory[] = [
@@ -124,6 +123,7 @@ export interface Project {
   color: string; // accent gradient for the card
   year: string;
   featured: boolean;
+  image?: string;
 }
 
 export const projects: Project[] = [
@@ -146,6 +146,7 @@ export const projects: Project[] = [
     color: "from-violet-500 to-fuchsia-400",
     year: "2025",
     featured: true,
+    image: "/projects/skillwise.png",
   },
   {
     slug: "pulsetrack",
@@ -166,6 +167,7 @@ export const projects: Project[] = [
     color: "from-rose-500 to-orange-400",
     year: "2025",
     featured: true,
+    image: "/projects/pulsetrack.png",
   },
   {
     slug: "kalakrit",
@@ -187,6 +189,7 @@ export const projects: Project[] = [
     color: "from-emerald-500 to-teal-400",
     year: "2025",
     featured: true,
+    image: "/projects/kalakrit.png",
   },
 ];
 

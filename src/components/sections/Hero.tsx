@@ -54,6 +54,15 @@ export default function Hero() {
             </span>
           </motion.div>
 
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.18 }}
+            className="font-mono text-sm font-semibold uppercase tracking-[0.2em] text-accent-2 mb-4"
+          >
+            {profile.name}
+          </motion.p>
+
           <h1 className="font-display text-[2.6rem] font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-[3.6rem]">
             {headingWords.map((word, i) => (
               <span key={i} className="inline-block overflow-hidden align-bottom">

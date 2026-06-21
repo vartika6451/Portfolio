@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { profile } from "@/data/profile";
 
 const BOOT_LINES = [
   "booting portfolio.exe",
@@ -65,7 +66,7 @@ export default function LoadingScreen() {
               animate={{ scale: 1, opacity: 1, rotate: 0 }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             >
-              <span className="text-gradient-accent">AS</span>
+              <span className="text-gradient-accent">{profile.initials}</span>
               <motion.div
                 className="absolute inset-0 rounded-2xl"
                 style={{
@@ -76,7 +77,7 @@ export default function LoadingScreen() {
                 transition={{ duration: 2.2, repeat: Infinity, ease: "linear" }}
               />
               <div className="absolute inset-[2px] rounded-2xl bg-surface" />
-              <span className="relative text-gradient-accent">AS</span>
+              <span className="relative text-gradient-accent">{profile.initials}</span>
             </motion.div>
 
             <div className="font-mono text-sm text-ink-muted min-h-[1.5em]" aria-live="polite">

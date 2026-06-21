@@ -4,6 +4,7 @@ import "./globals.css";
 import SmoothScrollProvider from "@/components/SmoothScrollProvider";
 import CursorFX from "@/components/ui/CursorFX";
 import LoadingScreen from "@/components/ui/LoadingScreen";
+import { profile } from "@/data/profile";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -25,44 +26,40 @@ const jbMono = JetBrains_Mono({
   weight: ["400", "500", "600"],
 });
 
-const siteUrl = "https://aaravsharma.dev";
+const siteUrl = "https://vartikasharma.dev";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Aarav Sharma — Software Developer & CS Student",
-    template: "%s — Aarav Sharma",
+    default: `${profile.name} — Software Developer & CS Student`,
+    template: `%s — ${profile.name}`,
   },
   description:
-    "Aarav Sharma is a software developer and computer science student specializing in full-stack development, AI applications, and blockchain. Strong DSA background with Java. Open to internships, freelance work, and software engineering roles.",
+    `${profile.name} is a software developer and computer science undergraduate building full-stack products, Gen AI applications, and exploring Web3 — with a strong DSA foundation.`,
   keywords: [
-    "Aarav Sharma",
+    profile.name,
     "Software Developer",
     "Full Stack Developer",
     "AI Developer",
-    "Blockchain Developer",
-    "Computer Science Student",
+    "Blockchain Explorer",
+    "Computer Science Undergraduate",
     "DSA",
-    "Java Developer",
-    "Solana Developer",
     "Next.js Portfolio",
   ],
-  authors: [{ name: "Aarav Sharma", url: siteUrl }],
-  creator: "Aarav Sharma",
+  authors: [{ name: profile.name, url: siteUrl }],
+  creator: profile.name,
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: "Aarav Sharma — Software Developer & CS Student",
-    description:
-      "Full-stack developer and CS student building AI applications, blockchain systems, and production-grade software. Open to internships and SWE roles.",
-    siteName: "Aarav Sharma — Portfolio",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Aarav Sharma — Software Developer" }],
+    title: `${profile.name} — Software Developer & CS Student`,
+    description: profile.subline,
+    siteName: `${profile.name} — Portfolio`,
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: `${profile.name} — Software Developer` }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Aarav Sharma — Software Developer & CS Student",
-    description:
-      "Full-stack developer and CS student building AI applications, blockchain systems, and production-grade software.",
+    title: `${profile.name} — Software Developer & CS Student`,
+    description: profile.subline,
     images: ["/og-image.png"],
   },
   robots: { index: true, follow: true },
@@ -81,15 +78,16 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Aarav Sharma",
+    name: profile.name,
     url: siteUrl,
     jobTitle: "Software Developer",
-    description:
-      "Software developer and computer science student specializing in full-stack development, AI applications, and blockchain.",
+    description: profile.subline,
     sameAs: [
-      "https://github.com/yourusername",
-      "https://linkedin.com/in/yourusername",
-      "https://leetcode.com/yourusername",
+      profile.socials.github,
+      profile.socials.linkedin,
+      profile.socials.leetcode,
+      profile.socials.codeforces,
+      profile.socials.twitter,
     ],
   };
 
