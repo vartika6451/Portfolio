@@ -10,7 +10,7 @@ export const profile = {
   tagline: "Building Digital Experiences That Matter",
   subline:
     "Computer science undergraduate and software developer building full-stack products, Gen AI applications, and exploring Web3 — with a strong DSA foundation and 400+ problems solved.",
-  location: "Delhi, India",
+  location: "Gurugram, India",
   email: "vartikasharma9093@gmail.com",
   resumeUrl: "/resume.pdf",
   socials: {
